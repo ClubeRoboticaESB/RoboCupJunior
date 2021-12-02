@@ -9,10 +9,10 @@
 
 # Material
 Main Board:
-* Arduino Uno/Nano
+* Uno/STM32/ESP32
 
 Slave:
-* Nano
+* STM32/ESP32
 
 Communication:
 * Not allowed
