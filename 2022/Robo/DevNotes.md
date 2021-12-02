@@ -1,10 +1,9 @@
-# Robocup Junior 2022
-## Rescue Line
+# Robocup Junior 2022 - Rescue Line
 
-|Index|
-----------
-|[Material](#material)|
-|[Detalhes Técnicos](#detalhes-técnicos)|
+## Index:
+* [Material](#material)
+* [Detalhes Técnicos](#detalhes-técnicos)
+    * [Robô](#robô)
 
 
 # Material
@@ -25,7 +24,7 @@ Sensores:
 * Ultrasound or TOF sensor
 
 # Detalhes Técnicos
-## Robó
+## Robô
 Haverá duas placas:
 * Master
     * Uno/STM32/ESP32
@@ -36,7 +35,5 @@ Haverá duas placas:
     * Nota: Nano ou Uno não dão devido à fala de pinos Analógicos ou ADC
     
 ----------
-## Chão
-A linha preta tem entre 1 a 2 cm  
-Os marcadores verdes de virar são 25x25 mm
+
 
