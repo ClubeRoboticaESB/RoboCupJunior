@@ -35,6 +35,12 @@ Haverá duas placas:
     * Nota: Nano ou Uno não dão devido à fala de pinos Analógicos ou ADC
 
 * Nota: STM32 ou ESP32 só lêm 3.3V nos Analog Inputs
-----------
+
+Escolha: STM32
+
+Checklist para quando estiver com o STM32 (Bluepill):
+* Dar update ao bootloader
+* Verificar upload
+
 
 
