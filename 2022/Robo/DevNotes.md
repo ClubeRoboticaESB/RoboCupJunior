@@ -33,7 +33,8 @@ Haverá duas placas:
     * STM32/ESP32
         * Nota sobre o ESP32: [ESP32 não lê valores analógicos de forma linear](https://www.esp32.com/viewtopic.php?t=2881)
     * Nota: Nano ou Uno não dão devido à fala de pinos Analógicos ou ADC
-    
+
+* Nota: STM32 ou ESP32 só lêm 3.3V nos Analog Inputs
 ----------
 
 
