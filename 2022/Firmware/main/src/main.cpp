@@ -1,9 +1,22 @@
 #include <Arduino.h>
+#include <Wire.h>
 
-void setup() {
-  // put your setup code here, to run once:
+
+
+void setup()
+{
+  Wire.begin();        // join i2c bus (address optional for master)
+  Serial.begin(9600);  // start serial for output
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+  Wire.requestFrom(2, 8);    // request 6 bytes from slave device #2
+  while(Wire.available())    // slave may send less than requested
+  {
+    int c = Wire.read(); // receive a byte as character
+    Serial.print(c);         // print the character
+  }
+
+  delay(500);
 }
