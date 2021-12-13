@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# YAAJ_BluePill_Part_Like
+# BluePill_Part_Like
 #
-DEF YAAJ_BluePill_Part_Like U 0 40 Y Y 1 F N
+DEF BluePill_Part_Like U 0 40 Y Y 1 F N
 F0 "U" -500 1000 50 H V C CNN
-F1 "YAAJ_BluePill_Part_Like" 0 100 50 V V C CNN
+F1 "BluePill_Part_Like" 0 100 50 V V C CNN
 F2 "" 700 -1000 50 H I C CNN
 F3 "" 700 -1000 50 H I C CNN
 DRAW

@@ -1,5 +1,6 @@
 # Robocup Junior 2022 - Rescue Line
 
+[Regras]()
 ## Index:
 * [Material](#material)
 * [Detalhes Técnicos](#detalhes-técnicos)
@@ -8,8 +9,7 @@
 
 # Material
 Main Board:
-* Uno/Mega/STM32/ESP32
-    * Nota sobre o ESP32: [ESP32 não lê valores analógicos de forma linear](https://www.esp32.com/viewtopic.php?t=2881)
+* STM32
 
 Communication:
 * Not allowed
@@ -20,12 +20,12 @@ Sensores:
 * [1 x IR Sensor](https://www.botnroll.com/pt/infravermelhos/2586-seguidor-de-linha-c-5-sensores-ir-ws.html)
     * Para seguidor de Linha
 * Ultrasound or TOF sensor
+    * TBD
 
+Motores:
+* 4 x Motores de passo
+* TMC 2208/2209
+    * Drivers para o motor de passo
 # Detalhes Técnicos
 ## Robô
-
-* Main Board:
-    * Uno/Mega/STM32/ESP32
-
-Escolha: ???
-
+## TBD

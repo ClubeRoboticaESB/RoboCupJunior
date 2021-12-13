@@ -1,4 +1,4 @@
-(module YAAJ_Modules_STM32:YAAJ_BluePill_2 (layer F.Cu) (tedit 5F81AE11)
+(module Modules_STM32:BluePill_2 (layer F.Cu) (tedit 5F81AE11)
   (descr "Through hole headers for BluePill module. No SWD breakout. Fancy silkscreen.")
   (tags "module BlluePill Blue Pill header SWD breakout")
   (fp_text reference REF** (at 7.62 -3.81) (layer F.SilkS)
@@ -97,32 +97,12 @@
   (pad 19 thru_hole circle (at 0 45.72) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask))
   (pad 21 thru_hole circle (at 15.24 48.26) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask))
   (pad 20 thru_hole circle (at 0 48.26) (size 1.7 1.7) (drill 1) (layers *.Cu *.Mask))
-  (model D:/Users/admin/Documents/KiCad/Libraries/packages3d/Modules/STM32_Blue_Pill/YAAJ_BluePill_PinHeaders_H_SWD_cp.wrl
+  (model ${KISYS3DMOD}/STM32_BluePill.3dshapes/BluePill_PinHeaders_No_SWD_cp.step
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )
-  (model D:/Users/admin/Documents/KiCad/Libraries/packages3d/Modules/STM32_Blue_Pill/YAAJ_BluePill_PinHeaders_No_SWD_cp.wrl
-    (at (xyz 0 0 0))
-    (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0))
-  )
-  (model D:/Users/admin/Documents/KiCad/Libraries/packages3d/Modules/STM32_Blue_Pill/YAAJ_BluePill_PinHeaders_V_SWD_cp.wrl
-    (at (xyz 0 0 0))
-    (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0))
-  )
-  (model D:/Users/admin/Documents/KiCad/Libraries/packages3d/Modules/STM32_Blue_Pill/YAAJ_BluePill_PinSockets_H_SWD_cp.wrl
-    (at (xyz 0 0 0))
-    (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0))
-  )
-  (model D:/Users/admin/Documents/KiCad/Libraries/packages3d/Modules/STM32_Blue_Pill/YAAJ_BluePill_PinSockets_No_SWD_cp.wrl
-    (at (xyz 0 0 0))
-    (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0))
-  )
-  (model D:/Users/admin/Documents/KiCad/Libraries/packages3d/Modules/STM32_Blue_Pill/YAAJ_BluePill_PinSockets_V_SWD_cp.wrl
+  (model ${KISYS3DMOD}/STM32_BluePill.3dshapes/BluePill_PinHeaders_No_SWD_cp.wrl
     (at (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
