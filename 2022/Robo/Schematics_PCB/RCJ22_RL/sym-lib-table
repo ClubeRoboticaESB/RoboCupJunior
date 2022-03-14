@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "STM32_Bluepill")(type "KiCad")(uri "C:/Users/Alexis/Desktop/Projetos/Robotica/RoboCupJunior/2022/Robo/Schematics_PCB/Kicad_STM32_Symbol/Symbols/BluePill_Part_Like.kicad_sym")(options "")(descr ""))
+)

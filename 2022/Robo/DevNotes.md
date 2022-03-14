@@ -1,6 +1,9 @@
 # Robocup Junior 2022 - Rescue Line
 
-[Regras]()
+## TBD
+Consider UART communication between a RP2040 and the main STM32 Bluepill 
+
+[Regras](https://junior.robocup.org/wp-content/uploads/2022Rules/2022_RescueLine_Rules_final01.pdf)
 ## Index:
 * [Material](#material)
 * [Detalhes Técnicos](#detalhes-técnicos)
@@ -9,13 +12,13 @@
 
 # Material
 Main Board:
-* STM32
+* STM32 Bluepill
 
 Communication:
 * Not allowed
 
 Sensores:
-* [4 x RGB Sensor](https://www.botnroll.com/pt/luz-imagem/423-sensor-de-cor-tcs3200.html)
+* [2 x RGB Sensor](https://www.botnroll.com/pt/luz-imagem/423-sensor-de-cor-tcs3200.html)
     * Para deteção dos quadrados para virar
 * [1 x IR Sensor](https://www.botnroll.com/pt/infravermelhos/2586-seguidor-de-linha-c-5-sensores-ir-ws.html)
     * Para seguidor de Linha
@@ -23,9 +26,7 @@ Sensores:
     * TBD
 
 Motores:
-* 4 x Motores de passo
-* TMC 2208/2209
-    * Drivers para o motor de passo
+* 4 x Motores DC 12V
 # Detalhes Técnicos
 ## Robô
-## TBD
+
