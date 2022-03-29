@@ -4,7 +4,7 @@
 #include "pins.h"
 
 tcs3200 rgbSensor1(CS1_S0,CS1_S1,CS1_S2,CS1_S3,CS1_OUTPUT);
-MDriver driver();
+MDriver driver(IN1A, IN2A, IN3A, IN4A);
 
 void setup() {
   rgbSensor1.scale(20);

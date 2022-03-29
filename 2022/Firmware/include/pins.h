@@ -22,8 +22,8 @@
 #define IN4A PA6
 
 // Driver 2
-#define IN1B PB6
-#define IN2B PB7
+#define IN1B PA10
+#define IN2B PA5
 #define IN3B PB8
 #define IN4B PB9
 
