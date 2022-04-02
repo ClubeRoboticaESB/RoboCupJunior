@@ -33,9 +33,12 @@ RoboCup Junior 2022
 * Santa Maria da Feira, Portugal
     * National Competition
     * 27th of April to 01 of May
-* Unknown
-    * Unknown
-    * Unknown
+* Guimarães, Portugal
+    * European Competition
+    * 21-24th of June
+* Bangkok, Thailand
+    * International Competition
+    * 11-17th of July
 
 ### Project
 The project is located [here](/2022).
