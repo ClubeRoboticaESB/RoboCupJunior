@@ -34,3 +34,17 @@
 #define IR3 A2
 #define IR4 A3
 #define IR5 A4
+
+
+// Distance sensors
+// Sensor 1
+#define DIST_TRIG1 33
+#define DIST_ECHO1 32
+
+// Sensor 2
+#define DIST_TRIG2 35
+#define DIST_ECHO2 34
+
+
+// Button
+#define PIN_BUTTON 1

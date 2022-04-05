@@ -12,36 +12,31 @@ MDriver::MDriver(int in1, int in2, int in3, int in4) {
     pinMode(PIN_IN4, OUTPUT);
 }
 
-void MDriver::foward_a(int speed) {
-    // speed is a pwm value (0-255)
-    if (speed > 255) speed = 255;
-    if (speed < 0) speed = 0;
-    analogWrite(PIN_IN1, speed);
-    digitalWrite(PIN_IN2, LOW);
-}
+void MDriver::move(int rightSpeed, int leftSpeed) {
+    if (rightSpeed > 100)  rightSpeed = 100;
+    if (rightSpeed < -100) rightSpeed = -100;
+    if (leftSpeed > 100)  leftSpeed = 100;
+    if (leftSpeed < -100) leftSpeed = -100;
+    // set speed correctly
+    if (rightSpeed > 0) {
+        rightSpeed = map(rightSpeed, 0, 100, 0, 160);
+        analogWrite(PIN_IN1, rightSpeed);
+        digitalWrite(PIN_IN2, LOW);
+    } else if (rightSpeed < 0) {
+        rightSpeed = map(rightSpeed, -100, 0, 0, 160);
+        digitalWrite(PIN_IN1, LOW);
+        analogWrite(PIN_IN2, rightSpeed);
+    }
 
-void MDriver::reverse_a(int speed) {
-    // speed is a pwm value (0-255)
-    if (speed > 255) speed = 255;
-    if (speed < 0) speed = 0;
-    digitalWrite(PIN_IN1, LOW);
-    analogWrite(PIN_IN2, speed);
-}
-
-void MDriver::foward_b(int speed) {
-    // speed is a pwm value (0-255)
-    if (speed > 255) speed = 255;
-    if (speed < 0) speed = 0;
-    analogWrite(PIN_IN3, speed);
-    digitalWrite(PIN_IN4, LOW);
-}
-
-void MDriver::foward_a(int speed) {
-    // speed is a pwm value (0-255)
-    if (speed > 255) speed = 255;
-    if (speed < 0) speed = 0;
-    digitalWrite(PIN_IN3, LOW);
-    analogWrite(PIN_IN4, speed);
+    if (leftSpeed > 0) {
+        leftSpeed = map(leftSpeed, 0, 100, 0, 160);
+        analogWrite(PIN_IN3, leftSpeed);
+        digitalWrite(PIN_IN4, LOW);
+    } else if (leftSpeed < 0) {
+        leftSpeed = map(leftSpeed, -100, 0, 0, 160);
+        digitalWrite(PIN_IN3, LOW);
+        analogWrite(PIN_IN4, leftSpeed);
+    }
 }
 
 void MDriver::stop_a() {
