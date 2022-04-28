@@ -10,37 +10,27 @@ LineSense::LineSense(int ir1, int ir2, int ir3, int ir4, int ir5) {
 }
 
 int LineSense::readIR1() {
-    int original_value = analogRead(PIN_IR1);
-    // Normalize the value
-    int value = (original_value - 0) * 1000 / (1023 - 0);
+    int value = analogRead(PIN_IR1);
     return value;
 }
 
 int LineSense::readIR2() {
-    int original_value = analogRead(PIN_IR2);
-    // Normalize the value
-    int value = (original_value - 0) * 1000 / (1023 - 0);
+    int value = analogRead(PIN_IR2);
     return value;
 }
 
 int LineSense::readIR3() {
-    int original_value = analogRead(PIN_IR3);
-    // Normalize the value
-    int value = (original_value - 0) * 1000 / (1023 - 0);
+    int value = analogRead(PIN_IR3);
     return value;
 }
 
 int LineSense::readIR4() {
-    int original_value = analogRead(PIN_IR4);
-    // Normalize the value
-    int value = (original_value - 0) * 1000 / (1023 - 0);
+    int value = analogRead(PIN_IR4);
     return value;
 }
 
 int LineSense::readIR5() {
-    int original_value = analogRead(PIN_IR5);
-    // Normalize the value
-    int value = (original_value - 0) * 1000 / (1023 - 0);
+    int value = analogRead(PIN_IR5);
     return value;
 }
 

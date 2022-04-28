@@ -6,6 +6,5 @@ class DistSense {
     public:
 		DistSense(int ECHO, int TRIG);
         void reset();
-        bool inDistance(int dist);
         int distance();
 };

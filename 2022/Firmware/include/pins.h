@@ -20,20 +20,23 @@
 #define IN2A 3
 #define IN3A 4
 #define IN4A 5
+#define M1_PWM 6
+#define M2_PWM 9
 
 // Driver 2
-#define IN1B 6
-#define IN2B 7
-#define IN3B 8
-#define IN4B 9  
-
+#define IN1B 7
+#define IN2B 8
+#define IN3B 12
+#define IN4B 13 
+#define M3_PWM 10
+#define M4_PWM 11
 
 // IR Sensors (Line Sensor)
-#define IR1 A0
-#define IR2 A1
-#define IR3 A2
-#define IR4 A3
-#define IR5 A4
+#define IR1 A8
+#define IR2 A9
+#define IR3 A10
+#define IR4 A11
+#define IR5 A12
 
 
 // Distance sensors

@@ -17,14 +17,6 @@ void DistSense::reset() {
     digitalWrite(TRIG, LOW);
 }
 
-bool DistSense::inDistance(int dist) {
-    long duration = pulseIn(ECHO, HIGH);
-    // Calculating the distance in cm
-    int distance = duration * 0.034 / 2;
-    if (distance >= dist) return true;
-    else return false;
-}
-
 int DistSense::distance() {
     long duration = pulseIn(ECHO, HIGH);
     // Calculating the distance in cm
