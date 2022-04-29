@@ -19,6 +19,7 @@ void DistSense::reset() {
 
 int DistSense::distance() {
     long duration = pulseIn(ECHO, HIGH);
+    delay(20);
     // Calculating the distance in cm
     int distance = duration * 0.034 / 2;
     return distance;
