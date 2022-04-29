@@ -69,6 +69,7 @@ int tcs3200::read_green() {
 	unsigned long duration;
 
 	duration = pulseIn(PIN_OUTPUT, LOW);
+	delay(60);
 	//Serial.print("Red: ");
   	//Serial.println(1000 / duration);
 	if (duration != 0) {

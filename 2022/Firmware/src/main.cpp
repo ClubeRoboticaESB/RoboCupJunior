@@ -41,7 +41,7 @@ void loop() {
     int lsensor4 = line.readIR4();
     int lsensor5 = line.readIR5();
     distSensor1.reset();
-    Serial.println(distSensor1.distance());
+    rgbSensor1.read_green();
     Serial.println(lsensor2);
     Serial.println(lsensor3);
     Serial.println(lsensor4);
