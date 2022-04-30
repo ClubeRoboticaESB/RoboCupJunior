@@ -14,34 +14,39 @@ MDriver::MDriver(int in1, int in2, int in3, int in4, int pwm1, int pwm2) {
     pinMode(PIN_IN4, OUTPUT);
 }
 
-void MDriver::move(int rightSpeed, int leftSpeed) {
-    if (rightSpeed > 100)  rightSpeed = 100;
-    if (rightSpeed < -100) rightSpeed = -100;
-    if (leftSpeed > 100)  leftSpeed = 100;
-    if (leftSpeed < -100) leftSpeed = -100;
+void MDriver::move(int frontSpeed, int backSpeed) {
+    if (frontSpeed > 100)  frontSpeed = 100;
+    if (frontSpeed < -100) frontSpeed = -100;
+    if (backSpeed > 100)  backSpeed = 100;
+    if (backSpeed < -100) backSpeed = -100;
     // set speed correctly
-    if (rightSpeed > 0) {
-        rightSpeed = map(rightSpeed, 0, 100, 0, 255);
+    if (frontSpeed > 0) {
+        frontSpeed = map(frontSpeed, 0, 100, 0, 255);
         digitalWrite(PIN_IN1, HIGH);
         digitalWrite(PIN_IN2, LOW);
-        analogWrite(PWM1, rightSpeed);
-    } else if (rightSpeed < 0) {
-        rightSpeed = map(rightSpeed, -100, 0, 0, 255);
+        analogWrite(PWM1, frontSpeed);
+    } else if (frontSpeed < 0) {
+        frontSpeed *= -1;
+        frontSpeed = map(frontSpeed, 0, 100, 0, 255);
+        Serial.println("FrontSpeed: ");
+        Serial.println(frontSpeed);
         digitalWrite(PIN_IN1, LOW);
         digitalWrite(PIN_IN2, HIGH);
-        analogWrite(PWM1, rightSpeed);
+        analogWrite(PWM1, frontSpeed);
     }
 
-    if (leftSpeed > 0) {
-        leftSpeed = map(leftSpeed, 0, 100, 0, 255);
+    if (backSpeed > 0) {
+        Serial.println("Spinning Back motor");
+        backSpeed = map(backSpeed, 0, 100, 0, 255);
         digitalWrite(PIN_IN3, HIGH);
         digitalWrite(PIN_IN4, LOW);
-        analogWrite(PWM2, leftSpeed);
-    } else if (leftSpeed < 0) {
-        leftSpeed = map(leftSpeed, -100, 0, 0, 255);
+        analogWrite(PWM2, backSpeed);
+    } else if (backSpeed < 0) {
+        backSpeed *= -1;
+        backSpeed = map(backSpeed, 0, 100, 0, 255);
         digitalWrite(PIN_IN3, LOW);
         digitalWrite(PIN_IN4, HIGH);
-        analogWrite(PWM2, leftSpeed);
+        analogWrite(PWM2, backSpeed);
     }
 }
 

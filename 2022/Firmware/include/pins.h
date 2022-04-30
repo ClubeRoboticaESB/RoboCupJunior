@@ -16,20 +16,27 @@
 
 // Motor Drivers
 // Driver 1
-#define IN1A 2
-#define IN2A 3
-#define IN3A 4
-#define IN4A 5
-#define M1_PWM 6
-#define M2_PWM 9
+// Front Left
+#define IN1_FL 45
+#define IN2_FL 44
+#define EN_FL 7
+
+//Back Left
+#define IN1_BL 13
+#define IN2_BL 12
+#define EN_BL 5
+
 
 // Driver 2
-#define IN1B 7
-#define IN2B 8
-#define IN3B 12
-#define IN4B 13 
-#define M3_PWM 10
-#define M4_PWM 11
+//Front Right
+#define IN1_FR 8
+#define IN2_FR 9
+#define EN_FR 4
+
+//Dfine Back Right
+#define IN1_BR 53
+#define IN2_BR 52
+#define EN_BR 3
 
 // IR Sensors (Line Sensor)
 #define IR1 A8
