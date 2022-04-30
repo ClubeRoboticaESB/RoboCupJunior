@@ -18,13 +18,14 @@ LineSense line(IR1, IR2, IR3, IR4, IR5);
 
 int line_vtrans = 600, green_square = 20;
 int state = 0;
-int speed = 20;
+int speed = 100;
 void setup() {
     //while (digitalRead(PIN_BUTTON) != HIGH) {
     //    Serial.println("Click to start");
     //}
     Serial.begin(9600);
-    //rgbSensor2.scale(20);
+    rgbSensor1.scale(20);
+    rgbSensor2.scale(20);
     delay(1000);
 
 }
