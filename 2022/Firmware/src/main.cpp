@@ -16,9 +16,9 @@ DistSense distSensor2(DIST_TRIG2, DIST_ECHO2);
 
 LineSense line(IR1, IR2, IR3, IR4, IR5);
 
-int line_vtrans = 600, green_square = 20;
+int line_vtrans = 750, green_square = 20;
 int state = 0;
-int speed = 100;
+int speed = 30;
 void setup() {
     //while (digitalRead(PIN_BUTTON) != HIGH) {
     //    Serial.println("Click to start");
@@ -42,8 +42,8 @@ void loop() {
     int lsensor3 = line.readIR3();
     int lsensor4 = line.readIR4();
     int lsensor5 = line.readIR5();
-    distSensor1.reset();
-    Serial.println(rgbSensor2.read_green()); //20-40
+    //distSensor1.reset();
+    //Serial.println(rgbSensor2.read_green()); //20-40
     Serial.println(lsensor1);
     Serial.println(lsensor2);
     Serial.println(lsensor3);
@@ -51,18 +51,18 @@ void loop() {
     Serial.println(lsensor5);
     Serial.println();
     Serial.println();
-    distSensor1.reset();
-    distSensor2.reset();
+    //distSensor1.reset();
+    //distSensor2.reset();
 
-    //if ((rgbSensor1.read_green() > green_square || rgbSensor2.read_green() > green_square ) && ((line.readIR1() > line_vtrans && line.readIR2() > line_vtrans && line.readIR3() > line_vtrans) || (line.readIR3() > line_vtrans && line.readIR4() > line_vtrans && line.readIR5() > line_vtrans))) {
-    //    state = 1;
-    //}
+    if ((rgbSensor1.read_green() > green_square || rgbSensor2.read_green() > green_square ) && ((line.readIR1() > line_vtrans && line.readIR2() > line_vtrans && line.readIR3() > line_vtrans) || (line.readIR3() > line_vtrans && line.readIR4() > line_vtrans && line.readIR5() > line_vtrans))) {
+        state = 1;
+    }
     
     //if (distSensor1.distance() < 8 && distSensor1.distance() > 2) {
     //    state = 2;
     //}
 
-   switch (state) {
+    switch (state) {
        case 0:
             // First we detect if all of the sensor is on a white space
             // this is so the robot go foward on gaps
@@ -85,20 +85,20 @@ void loop() {
                 driverRight.move(speed, speed);
             } else if (line.readIR1() < line_vtrans) {
                 Serial.println("Moving to the left sensor 1");
-                driverLeft.move(speed-30, speed-30);
-                driverRight.move(speed+10, speed+10);
+                driverLeft.move(speed-75, speed-75);
+                driverRight.move(speed+20, speed+20);
             } else if (line.readIR2() < line_vtrans) {
                 Serial.println("Moving to the left sensor 2");
-                driverLeft.move(speed-20, speed-20);
-                driverRight.move(speed+10, speed+10);
+                driverLeft.move(speed-75, speed-75);
+                driverRight.move(speed+20, speed+20);
             } else if (line.readIR4() < line_vtrans) {
                 Serial.println("Moving to the right sensor 4");
-                driverLeft.move(speed+10, speed+10);
-                driverRight.move(speed-20, speed-20);
+                driverLeft.move(speed+20, speed+20);
+                driverRight.move(speed-75, speed-75);
             } else if (line.readIR5() < line_vtrans) {
                 Serial.println("Moving to the right sensor 5");
-                driverLeft.move(speed+10, speed+10);
-                driverRight.move(speed-30, speed-30);
+                driverLeft.move(speed+20, speed+20);
+                driverRight.move(speed-75, speed-75);
             }
             break;
         case 1:
@@ -119,7 +119,6 @@ void loop() {
             delay(50);
             state = 0;
             break;
-            
     }
-    //driverLeft.move(-100, -100);*/
+    
 }

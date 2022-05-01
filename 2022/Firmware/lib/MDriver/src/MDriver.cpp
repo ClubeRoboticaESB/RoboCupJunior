@@ -28,15 +28,12 @@ void MDriver::move(int frontSpeed, int backSpeed) {
     } else if (frontSpeed < 0) {
         frontSpeed *= -1;
         frontSpeed = map(frontSpeed, 0, 100, 0, 255);
-        Serial.println("FrontSpeed: ");
-        Serial.println(frontSpeed);
         digitalWrite(PIN_IN1, LOW);
         digitalWrite(PIN_IN2, HIGH);
         analogWrite(PWM1, frontSpeed);
     }
 
     if (backSpeed > 0) {
-        Serial.println("Spinning Back motor");
         backSpeed = map(backSpeed, 0, 100, 0, 255);
         digitalWrite(PIN_IN3, HIGH);
         digitalWrite(PIN_IN4, LOW);

@@ -22,8 +22,8 @@
 #define EN_FL 7
 
 //Back Left
-#define IN1_BL 13
-#define IN2_BL 12
+#define IN1_BL 12
+#define IN2_BL 13
 #define EN_BL 5
 
 
@@ -35,8 +35,8 @@
 
 //Dfine Back Right
 #define IN1_BR 53
-#define IN2_BR 52
-#define EN_BR 3
+#define IN2_BR 3
+#define EN_BR 2
 
 // IR Sensors (Line Sensor)
 #define IR1 A8
